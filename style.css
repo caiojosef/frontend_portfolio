@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e0f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.infos {
+    flex: 1;
+    min-width: 200px;
+  }
+
+.tab-btn {
+    font-size: 15px;
+    width: 100%;
+    border: none;
+    color: #020617;
+    background-color: #ffffff;
+    border-radius: 8px 8px 0px 0px;
+    font-weight: 500;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.tab-btn.active {
+    background-color: #e0f2f1;
+}
+
+.tab-btn:hover{
+    background-color: #80deea;
+}
+
+.content {
+    display: none;
+}
+
+.content.show {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    background-color: #e0f2f1;
+    border-radius: 0 0 8px 8px;
+    padding: 16px;
+    align-items: flex-start;
+  }
+
+.content-img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    flex: 0 0 120px; /* impede de esticar */
+    border-radius: 8px;
+  }
+
+.content-description{
+    text-indent: 15px; /* ou use 20px se preferir */
+}
+
+#links {
+    display: flex;
+    gap: 16px;
+    
+}
+
+#imgLinks {
+    width: 32px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+#imgLinks:hover {
+    transform: scale(1.1);
+}
+#links a {
+    text-decoration: none;       /* Remove o tracinho (sublinhado azul) */
+    display: inline-block;       /* Permite controlar o alinhamento */
+    vertical-align: middle;      /* Alinha as imagens */
+}
+@media (max-width: 600px) {
+    .content.show {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .content-img {
+        width: 50%;
+        max-width: 180px;
+        
+    }
+
+    .infos {
+        width: 100%;
+    }
+
+    .content-description {
+        text-align: justify;
+        padding: 0 10px;
+    }
+
+    #links {
+        justify-content: center;
+    }
+}
+
+.inputCalc, input{
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn-somar{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 5px;
+    margin-top: 7px;
+    margin-left: 2px;
+}
+
+.btn-somar:hover{
+    background-color: #80deea;
+}
+
+#resCalculo {
+    transition: all 0.3s ease;
+  }

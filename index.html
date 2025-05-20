@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="tab-buttons">
+            <button class="tab-btn active" content-id="home">
+                Home
+            </button>
+            <button class="tab-btn" content-id="calculadora">
+                Calculadora
+            </button>
+        </div>
+        <div class="tab-contents">
+            <div class="content show" id="home">
+                <img src="images/perfil.png" alt="home image" class="content-img">
+                <div class="infos">
+                    <h1 class="content-title">
+                        Olá,
+                    </h1>
+                    <p class="content-description">
+                        Este projeto representa meu portfólio pessoal, desenvolvido com HTML, CSS e JavaScript puro. A
+                        proposta é apresentar quem sou, minhas habilidades e meus principais trabalhos como
+                        desenvolvedor.
+                        Inclui uma navegação suave, design responsivo e foco na experiência do usuário. Foi o ponto de
+                        partida para minha jornada no front-end.
+
+                    </p>
+                    <br>
+                    <div id="links">
+                        <a href="https://www.linkedin.com/in/caiojosef/" target="_blank">
+                            <img id="imgLinks" src="images/linkedin.png" alt="ícone do LinkedIn clicável">
+                        </a>
+
+                        <a href="https://github.com/caiojosef" target="_blank">
+                            <img id="imgLinks" src="images/github.png" alt="ícone do GitHub clicável">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="calculadora">
+                <img src="images/operacoes.png" alt="home image" class="content-img">
+                <div class="infos">
+                    <h1 class="content-title">
+                        Calculadora
+                    </h1>
+                    <p class="content-description">
+
+                    <div class="inputCalc">
+                        <input type="number" placeholder="Número 1" name="" id="num1" inputmode="numeric">
+                        <br>
+                        <input type="number" placeholder="Número 2" id="num2" inputmode="numeric">
+                        <br>
+                        <select name="" id="selOperacao">
+                            <option value="somar">Somar</option>
+                            <option value="subtrair">Subtrair</option>
+                            <option value="multiplicar">Multiplicar</option>
+                            <option value="dividir">Dividir</option>
+                        </select>
+                    </div>
+                    <button class="btn-somar">Calcular</button>
+                    <div id="resCalculo">
+
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
